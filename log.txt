@@ -1,0 +1,181 @@
+New directory created: /home/bim16102/data/processed_data/
+Files to be proceesed: /home/bim16102/data/SRR412199_tail.fastq
+/home/bim16102/data/SRR412199_head.fastq
+Starting analysis on SRR412199_tail.fastq ...
+Running fastqc on SRR412199_tail.fastq
+Started analysis of SRR412199_tail.fastq
+Approx 5% complete for SRR412199_tail.fastq
+Approx 10% complete for SRR412199_tail.fastq
+Approx 15% complete for SRR412199_tail.fastq
+Approx 20% complete for SRR412199_tail.fastq
+Approx 25% complete for SRR412199_tail.fastq
+Approx 30% complete for SRR412199_tail.fastq
+Approx 35% complete for SRR412199_tail.fastq
+Approx 40% complete for SRR412199_tail.fastq
+Approx 45% complete for SRR412199_tail.fastq
+Approx 50% complete for SRR412199_tail.fastq
+Approx 55% complete for SRR412199_tail.fastq
+Approx 60% complete for SRR412199_tail.fastq
+Approx 65% complete for SRR412199_tail.fastq
+Approx 70% complete for SRR412199_tail.fastq
+Approx 75% complete for SRR412199_tail.fastq
+Approx 80% complete for SRR412199_tail.fastq
+Approx 85% complete for SRR412199_tail.fastq
+Approx 90% complete for SRR412199_tail.fastq
+Approx 95% complete for SRR412199_tail.fastq
+Approx 100% complete for SRR412199_tail.fastq
+Analysis complete for SRR412199_tail.fastq
+Aligning original SRR412199_tail.fastq to D.melanogaster dm3 genome...
+# reads processed: 500000
+# reads with at least one reported alignment: 1377 (0.28%)
+# reads that failed to align: 498335 (99.67%)
+# reads with alignments suppressed due to -m: 288 (0.06%)
+Reported 1377 alignments to 1 output stream(s)
+Starting adapter clipping...
+Generating QC reports on the clipped data...
+Started analysis of SRR412199_tail_clipped.fastq
+Approx 5% complete for SRR412199_tail_clipped.fastq
+Approx 10% complete for SRR412199_tail_clipped.fastq
+Approx 15% complete for SRR412199_tail_clipped.fastq
+Approx 20% complete for SRR412199_tail_clipped.fastq
+Approx 25% complete for SRR412199_tail_clipped.fastq
+Approx 30% complete for SRR412199_tail_clipped.fastq
+Approx 35% complete for SRR412199_tail_clipped.fastq
+Approx 40% complete for SRR412199_tail_clipped.fastq
+Approx 45% complete for SRR412199_tail_clipped.fastq
+Approx 50% complete for SRR412199_tail_clipped.fastq
+Approx 55% complete for SRR412199_tail_clipped.fastq
+Approx 60% complete for SRR412199_tail_clipped.fastq
+Approx 65% complete for SRR412199_tail_clipped.fastq
+Approx 70% complete for SRR412199_tail_clipped.fastq
+Approx 75% complete for SRR412199_tail_clipped.fastq
+Approx 80% complete for SRR412199_tail_clipped.fastq
+Approx 85% complete for SRR412199_tail_clipped.fastq
+Approx 90% complete for SRR412199_tail_clipped.fastq
+Approx 95% complete for SRR412199_tail_clipped.fastq
+Analysis complete for SRR412199_tail_clipped.fastq
+Aligning adapter clipped fastq to D.melanogaster dm3 genome...
+# reads processed: 107889
+# reads with at least one reported alignment: 3109 (2.88%)
+# reads that failed to align: 95057 (88.11%)
+# reads with alignments suppressed due to -m: 9723 (9.01%)
+Reported 3109 alignments to 1 output stream(s)
+Starting quality trimming...
+Generating QC reports on the quality trimmed data...
+Started analysis of SRR412199_tail_Qtrimmed.fastq
+Approx 5% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 10% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 15% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 20% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 25% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 30% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 35% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 40% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 45% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 50% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 55% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 60% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 65% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 70% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 75% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 80% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 85% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 90% complete for SRR412199_tail_Qtrimmed.fastq
+Approx 95% complete for SRR412199_tail_Qtrimmed.fastq
+Analysis complete for SRR412199_tail_Qtrimmed.fastq
+Aligning quality trimmed file to D.melanogaster dm3 genome...
+# reads processed: 498344
+# reads with at least one reported alignment: 1445 (0.29%)
+# reads that failed to align: 494489 (99.23%)
+# reads with alignments suppressed due to -m: 2410 (0.48%)
+Reported 1445 alignments to 1 output stream(s)
+Analysis complete for SRR412199_tail.fastq!
+Starting analysis on SRR412199_head.fastq ...
+Running fastqc on SRR412199_head.fastq
+Started analysis of SRR412199_head.fastq
+Approx 5% complete for SRR412199_head.fastq
+Approx 10% complete for SRR412199_head.fastq
+Approx 15% complete for SRR412199_head.fastq
+Approx 20% complete for SRR412199_head.fastq
+Approx 25% complete for SRR412199_head.fastq
+Approx 30% complete for SRR412199_head.fastq
+Approx 35% complete for SRR412199_head.fastq
+Approx 40% complete for SRR412199_head.fastq
+Approx 45% complete for SRR412199_head.fastq
+Approx 50% complete for SRR412199_head.fastq
+Approx 55% complete for SRR412199_head.fastq
+Approx 60% complete for SRR412199_head.fastq
+Approx 65% complete for SRR412199_head.fastq
+Approx 70% complete for SRR412199_head.fastq
+Approx 75% complete for SRR412199_head.fastq
+Approx 80% complete for SRR412199_head.fastq
+Approx 85% complete for SRR412199_head.fastq
+Approx 90% complete for SRR412199_head.fastq
+Approx 95% complete for SRR412199_head.fastq
+Approx 100% complete for SRR412199_head.fastq
+Analysis complete for SRR412199_head.fastq
+Aligning original SRR412199_head.fastq to D.melanogaster dm3 genome...
+# reads processed: 500000
+# reads with at least one reported alignment: 1240 (0.25%)
+# reads that failed to align: 498477 (99.70%)
+# reads with alignments suppressed due to -m: 283 (0.06%)
+Reported 1240 alignments to 1 output stream(s)
+Starting adapter clipping...
+Generating QC reports on the clipped data...
+Started analysis of SRR412199_head_clipped.fastq
+Approx 5% complete for SRR412199_head_clipped.fastq
+Approx 10% complete for SRR412199_head_clipped.fastq
+Approx 15% complete for SRR412199_head_clipped.fastq
+Approx 20% complete for SRR412199_head_clipped.fastq
+Approx 25% complete for SRR412199_head_clipped.fastq
+Approx 30% complete for SRR412199_head_clipped.fastq
+Approx 35% complete for SRR412199_head_clipped.fastq
+Approx 40% complete for SRR412199_head_clipped.fastq
+Approx 45% complete for SRR412199_head_clipped.fastq
+Approx 50% complete for SRR412199_head_clipped.fastq
+Approx 55% complete for SRR412199_head_clipped.fastq
+Approx 60% complete for SRR412199_head_clipped.fastq
+Approx 65% complete for SRR412199_head_clipped.fastq
+Approx 70% complete for SRR412199_head_clipped.fastq
+Approx 75% complete for SRR412199_head_clipped.fastq
+Approx 80% complete for SRR412199_head_clipped.fastq
+Approx 85% complete for SRR412199_head_clipped.fastq
+Approx 90% complete for SRR412199_head_clipped.fastq
+Approx 95% complete for SRR412199_head_clipped.fastq
+Analysis complete for SRR412199_head_clipped.fastq
+Aligning adapter clipped fastq to D.melanogaster dm3 genome...
+# reads processed: 102191
+# reads with at least one reported alignment: 2857 (2.80%)
+# reads that failed to align: 90142 (88.21%)
+# reads with alignments suppressed due to -m: 9192 (8.99%)
+Reported 2857 alignments to 1 output stream(s)
+Starting quality trimming...
+Generating QC reports on the quality trimmed data...
+Started analysis of SRR412199_head_Qtrimmed.fastq
+Approx 5% complete for SRR412199_head_Qtrimmed.fastq
+Approx 10% complete for SRR412199_head_Qtrimmed.fastq
+Approx 15% complete for SRR412199_head_Qtrimmed.fastq
+Approx 20% complete for SRR412199_head_Qtrimmed.fastq
+Approx 25% complete for SRR412199_head_Qtrimmed.fastq
+Approx 30% complete for SRR412199_head_Qtrimmed.fastq
+Approx 35% complete for SRR412199_head_Qtrimmed.fastq
+Approx 40% complete for SRR412199_head_Qtrimmed.fastq
+Approx 45% complete for SRR412199_head_Qtrimmed.fastq
+Approx 50% complete for SRR412199_head_Qtrimmed.fastq
+Approx 55% complete for SRR412199_head_Qtrimmed.fastq
+Approx 60% complete for SRR412199_head_Qtrimmed.fastq
+Approx 65% complete for SRR412199_head_Qtrimmed.fastq
+Approx 70% complete for SRR412199_head_Qtrimmed.fastq
+Approx 75% complete for SRR412199_head_Qtrimmed.fastq
+Approx 80% complete for SRR412199_head_Qtrimmed.fastq
+Approx 85% complete for SRR412199_head_Qtrimmed.fastq
+Approx 90% complete for SRR412199_head_Qtrimmed.fastq
+Approx 95% complete for SRR412199_head_Qtrimmed.fastq
+Analysis complete for SRR412199_head_Qtrimmed.fastq
+Aligning quality trimmed file to D.melanogaster dm3 genome...
+# reads processed: 497447
+# reads with at least one reported alignment: 1302 (0.26%)
+# reads that failed to align: 494784 (99.46%)
+# reads with alignments suppressed due to -m: 1361 (0.27%)
+Reported 1302 alignments to 1 output stream(s)
+Analysis complete for SRR412199_head.fastq!
