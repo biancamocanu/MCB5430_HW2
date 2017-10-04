@@ -33,17 +33,24 @@ outPATH="/home/bim16102/data/processed_data/"
 fastqfiles=$(find ${inPATH} -maxdepth 1 -type f)
 
 #===============================================================================================
+
 if [ -s $outPATH ]
 	then
- 		echo "$outPATH directory already exists"
 		cd ${outPATH}
+		mkdir ${outPATH}logfiles
+		touch ${outPATH}logfiles/log.txt
+ 		echo "$outPATH directory already exists" | tee -a ${outPATH}logfiles/log.txt
+
 	else
 		mkdir ${outPATH}
-		echo "New directory created: ${outPATH}"
 		cd ${outPATH}
+		mkdir ${outPATH}logfiles
+		touch ${outPATH}logfiles/log.txt
+		echo "New directory created: ${outPATH}" | tee -a ${outPATH}logfiles/log.txt
 fi
 
-echo -e "Files to be proceesed: $fastqfiles"
+
+echo -e "Files to be proceesed: $fastqfiles" | tee -a ${outPATH}logfiles/log.txt
 
 for file in $fastqfiles
 	do	
@@ -51,29 +58,34 @@ for file in $fastqfiles
 		
 		mkdir ${folder}  #folder for original data
 		cd $folder
-		echo -e "Starting analysis on $(basename $file) ..."
-		echo "Running fastqc on $(basename $file)"
-		fastqc $file -o ${outPATH}${folder}
-		echo "Aligning original $(basename $file) to D.melanogaster dm3 genome..."
-		bowtie -v2 -m1 -q $dm3_genome $file ${folder}.sam 		
+		echo -e "Starting analysis on $(basename $file) ..." | tee -a ${outPATH}logfiles/log.txt 
+		echo "Running fastqc on $(basename $file)" | tee -a ${outPATH}logfiles/log.txt
+		fastqc $file -o ${outPATH}${folder}  2>&1 | tee -a ${outPATH}logfiles/log.txt
+		echo "Aligning original $(basename $file) to D.melanogaster dm3 genome..." | tee -a ${outPATH}logfiles/log.txt
+		bowtie -v2 -m1 -q $dm3_genome $file ${folder}.sam 2>&1 | tee -a ${outPATH}logfiles/log.txt
 		cd ..
 		
+		echo "Starting adapter clipping..." | tee -a ${outPATH}logfiles/log.txt
 		mkdir ${folder}_fastxclipped #folder for adaptor-clipped data
 		cd ${folder}_fastxclipped
-		fastx_clipper -Q 33 -a TGCTTGGACTACATATGGTTGAGGGTTGTATGGAATTCTCGGGTGCCAAGG -i $file -o ./${folder}_clipped.fastq
-		fastqc ${folder}_clipped.fastq -o ${outPATH}${folder}_fastxclipped 
-		echo "Aligning adapter clipped fastq to D.melanogaster dm3 genome..."
-		bowtie -v2 -m1 -q $dm3_genome ${folder}_clipped.fastq ${folder}_clipped.sam
+		fastx_clipper -Q 33 -a TGCTTGGACTACATATGGTTGAGGGTTGTATGGAATTCTCGGGTGCCAAGG -i $file -o ./${folder}_clipped.fastq 2>&1 | tee -a ${outPATH}logfiles/log.txt
+		echo "Generating QC reports on the clipped data..." | tee -a ${outPATH}logfiles/log.txt
+		fastqc ${folder}_clipped.fastq -o ${outPATH}${folder}_fastxclipped 2>&1 | tee -a ${outPATH}logfiles/log.txt
+
+		echo "Aligning adapter clipped fastq to D.melanogaster dm3 genome..." | tee -a ${outPATH}logfiles/log.txt
+		bowtie -v2 -m1 -q $dm3_genome ${folder}_clipped.fastq ${folder}_clipped.sam 2>&1 | tee -a ${outPATH}logfiles/log.txt
 		cd ..
 
-
+		echo "Starting quality trimming..." | tee -a ${outPATH}logfiles/log.txt
 		mkdir ${folder}_Qtrimmed #folder for quality-trimmed data
 		cd ${folder}_Qtrimmed
-		fastq_quality_trimmer -Q33 -t 30 -l 20 -i $file -o ./${folder}_Qtrimmed.fastq
-		fastqc ${folder}_Qtrimmed.fastq -o ${outPATH}${folder}_Qtrimmed
-		echo "Aligning quality trimmed file to D.melanogaster dm3 genome..."
-		bowtie -v2 -m1 -q $dm3_genome ${folder}_Qtrimmed.fastq ${folder}_Qtrimmed.sam
+		fastq_quality_trimmer -Q33 -t 30 -l 20 -i $file -o ./${folder}_Qtrimmed.fastq 2>&1 | tee -a ${outPATH}logfiles/log.txt
+		echo "Generating QC reports on the quality trimmed data..." | tee -a ${outPATH}logfiles/log.txt
+		fastqc ${folder}_Qtrimmed.fastq -o ${outPATH}${folder}_Qtrimmed 2>&1 | tee -a ${outPATH}logfiles/log.txt
+		echo "Aligning quality trimmed file to D.melanogaster dm3 genome..." | tee -a ${outPATH}logfiles/log.txt
+		bowtie -v2 -m1 -q $dm3_genome ${folder}_Qtrimmed.fastq ${folder}_Qtrimmed.sam 2>&1 | tee -a ${outPATH}logfiles/log.txt
 		cd ..
+		echo "Analysis complete for $(basename $file)!" | tee -a ${outPATH}logfiles/log.txt
 	done	
 
 #===============================================================================================
